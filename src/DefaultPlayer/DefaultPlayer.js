@@ -143,7 +143,7 @@ const connectedPlayer = videoConnect(
             // TODO: This is not pretty. Doing device detection to remove
             // spinner on iOS devices for a quick and dirty win. We should see if
             // we can use the same readyState check safely across all browsers.
-            loading: false,
+            loading: readyState < 4,
             percentagePlayed: getPercentagePlayed(restState),
             percentageBuffered: getPercentageBuffered(restState),
             ...restState
